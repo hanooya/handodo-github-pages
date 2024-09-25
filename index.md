@@ -33,7 +33,7 @@ layout: default
   </div>
   <div class="content">
     <h2 id="性感">性感</h2>
-  ![性感](./images/15.jpg)
+ ![性感](images/15.jpg)
     
    <h2 id="可爱">可爱</h2>
   ![可爱](./images/16.jpg)
