@@ -7,29 +7,64 @@ layout: default
   body {
     background: rgba(255, 255, 255, 0.8); /* 透明背景 */
   }
+  .container {
+    display: flex;
+  }
+  .sidebar {
+    width: 200px; /* 标题栏宽度 */
+    padding: 10px;
+    position: sticky; /* 使标题栏固定 */
+    top: 10px; /* 离顶部的距离 */
+  }
+  .content {
+    flex-grow: 1;
+    padding: 10px;
+    margin-left: 20px; /* 避免与标题栏重叠 */
+  }
+  .image {
+    display: none; /* 默认隐藏所有图片 */
+  }
+  .image.active {
+    display: block; /* 只有被激活的图片显示 */
+  }
 </style>
 
-## 标题栏
-- [性感](#性感)
-- [可爱](#可爱)
-- [少女](#少女)
-- [御姐](#御姐)
-- [萌妹](#萌妹)
+<div class="container">
+  <div class="sidebar">
+    <h2>标题栏</h2>
+    <ul>
+      <li><a href="#性感" onclick="showImage('性感')">性感</a></li>
+      <li><a href="#可爱" onclick="showImage('可爱')">可爱</a></li>
+      <li><a href="#少女" onclick="showImage('少女')">少女</a></li>
+      <li><a href="#御姐" onclick="showImage('御姐')">御姐</a></li>
+      <li><a href="#萌妹" onclick="showImage('萌妹')">萌妹</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2 id="性感">性感</h2>
+    <img class="image" id="性感" src="./images/15.jpg" style="max-width: 100%; height: auto;">
+    <h2 id="可爱">可爱</h2>
+    <img class="image" id="可爱" src="./images/16.jpg" style="max-width: 100%; height: auto;">
+    <h2 id="少女">少女</h2>
+    <img class="image" id="少女" src="./images/17.jpg" style="max-width: 100%; height: auto;">
+    <h2 id="御姐">御姐</h2>
+    <img class="image" id="御姐" src="./images/18.jpg" style="max-width: 100%; height: auto;">
+    <h2 id="萌妹">萌妹</h2>
+    <img class="image" id="萌妹" src="./images/19.jpg" style="max-width: 100%; height: auto;">
+  </div>
+</div>
 
-## 性感
-![性感](./images/15.jpg)
-
-## 可爱
-![可爱](./images/16.jpg)
-
-## 少女
-![少女](./images/17.jpg)
-
-## 御姐
-![御姐](./images/18.jpg)
-
-## 萌妹
-![萌妹](./images/19.jpg)
+<script>
+  function showImage(id) {
+    // 隐藏所有图片
+    const images = document.querySelectorAll('.image');
+    images.forEach(img => img.classList.remove('active'));
+    
+    // 显示对应的图片
+    const activeImage = document.getElementById(id);
+    activeImage.classList.add('active');
+  }
+</script>
 
 
 
