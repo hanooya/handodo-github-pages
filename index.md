@@ -17,6 +17,7 @@ layout: default
   .content {
     flex-grow: 1;
     padding: 10px;
+    margin-left: 20px; /* 避免与标题栏重叠 */
   }
 </style>
 
@@ -32,25 +33,27 @@ layout: default
     </ul>
   </div>
   <div class="content">
-   <h2 id="性感">性感</h2>
-         
-  [性感](./images/15.jpg)
+    
+  <h2 id="性感">性感</h2>
+ 
+  ![性感](./images/15.jpg)
+
+  <h2 id="可爱">可爱</h2>
   
-   <h2 id="可爱">可爱</h2>
-  
-  ![可爱](./images/16.jpg)
+   ![可爱](./images/16.jpg)
 
    <h2 id="少女">少女</h2>
-  
-  ![少女](./images/17.jpg)
+   
+   ![少女](./images/17.jpg)
 
    <h2 id="御姐">御姐</h2>
-  
-   ![御姐](./images/18.jpg)
- 
-   <h2 id="萌妹">萌妹</h2>
 
-  ![萌妹](./images/19.jpg)
+  ![御姐](./images/18.jpg)
+
+  <h2 id="萌妹">萌妹</h2>
+  
+   ![萌妹](./images/19.jpg)
   </div>
 </div>
+
 
