@@ -1,6 +1,6 @@
 title: 我的个人博客
 description: 这是我的个人博客，分享项目、文章和编程经验。
-theme: minima
+theme: jekyll-theme-slate
 markdown: kramdown
 kramdown:
   input: GFM
