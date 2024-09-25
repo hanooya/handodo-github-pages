@@ -1,18 +1,51 @@
 ---
-layout: homem
 title: 我的个人博客
+layout: default
 ---
 
-# 欢迎来到我的个人博客！
-[性感](./images/21.jpg)
-![image](./images/22.jpg)
-这里是我分享想法、经验和灵感的地方。
-[可爱](./images/20.jpg)
-## 最新文章
-[美女](./images/19.jpg)
+<style>
+  body {
+    background: rgba(255, 255, 255, 0.8); /* 透明背景 */
+  }
+  .container {
+    display: flex;
+  }
+  .sidebar {
+    width: 200px; /* 标题栏宽度 */
+    padding: 10px;
+  }
+  .content {
+    flex-grow: 1;
+    padding: 10px;
+  }
+</style>
 
-{% for post in site.posts %}
-  - [{{ post.title }}]({{ post.url }})
-{% endfor %}
+<div class="container">
+  <div class="sidebar">
+    <h2>标题栏</h2>
+    <ul>
+      <li><a href="#性感">性感</a></li>
+      <li><a href="#可爱">可爱</a></li>
+      <li><a href="#少女">少女</a></li>
+      <li><a href="#御姐">御姐</a></li>
+      <li><a href="#萌妹">萌妹</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2 id="性感">性感</h2>
+    ![性感](./images/15.jpg)
 
-感谢您的访问！希望您能在这里找到有趣的内容。
+   <h2 id="可爱">可爱</h2>
+  ![可爱](./images/16.jpg)
+
+   <h2 id="少女">少女</h2>
+  ![少女](./images/17.jpg)
+
+  <h2 id="御姐">御姐</h2>
+  ![御姐](./images/18.jpg)
+
+  <h2 id="萌妹">萌妹</h2>
+  ![萌妹](./images/19.jpg)
+  </div>
+</div>
+
